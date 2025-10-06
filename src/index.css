@@ -8,46 +8,46 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 330 100% 98%;
-    --foreground: 330 50% 15%;
+    --background: 330 100% 99%;
+    --foreground: 330 50% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 330 50% 15%;
+    --card-foreground: 330 50% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 330 50% 15%;
+    --popover-foreground: 330 50% 12%;
 
-    --primary: 330 85% 45%;
+    --primary: 330 90% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 330 100% 95%;
-    --secondary-foreground: 330 85% 35%;
+    --secondary: 320 80% 96%;
+    --secondary-foreground: 330 90% 40%;
 
-    --muted: 330 60% 96%;
-    --muted-foreground: 330 20% 50%;
+    --muted: 330 50% 97%;
+    --muted-foreground: 330 20% 45%;
 
-    --accent: 300 80% 60%;
+    --accent: 315 85% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 330 40% 90%;
+    --border: 330 45% 92%;
     --input: 330 40% 90%;
-    --ring: 330 85% 45%;
+    --ring: 330 90% 50%;
 
-    --radius: 1rem;
+    --radius: 1.25rem;
     
-    --gradient-primary: linear-gradient(135deg, hsl(330 85% 45%) 0%, hsl(320 90% 55%) 50%, hsl(300 80% 60%) 100%);
-    --gradient-soft: linear-gradient(180deg, hsl(330 100% 98%) 0%, hsl(320 100% 96%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(330 85% 45%) 0%, hsl(320 90% 55%) 30%, hsl(300 80% 60%) 60%, hsl(280 75% 65%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(330 90% 50%) 0%, hsl(315 85% 60%) 50%, hsl(300 80% 68%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(330 100% 99%) 0%, hsl(320 85% 97%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(330 90% 50%) 0%, hsl(320 85% 58%) 30%, hsl(310 80% 65%) 60%, hsl(300 75% 70%) 100%);
     
-    --shadow-elegant: 0 20px 60px -15px hsl(330 85% 45% / 0.3);
-    --shadow-soft: 0 10px 30px -10px hsl(330 60% 70% / 0.4);
-    --shadow-glow: 0 0 50px hsl(320 90% 55% / 0.5);
+    --shadow-elegant: 0 20px 60px -12px hsl(330 90% 50% / 0.35);
+    --shadow-soft: 0 10px 35px -8px hsl(330 80% 60% / 0.4);
+    --shadow-glow: 0 0 60px hsl(320 85% 58% / 0.6);
     
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -124,6 +124,12 @@ All colors MUST be HSL.
     background: var(--gradient-soft);
   }
   
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  
   .shadow-elegant {
     box-shadow: var(--shadow-elegant);
   }
@@ -134,6 +140,10 @@ All colors MUST be HSL.
   
   .shadow-glow {
     box-shadow: var(--shadow-glow);
+  }
+  
+  .drop-shadow-elegant {
+    filter: drop-shadow(0 8px 20px hsl(330 90% 50% / 0.4));
   }
   
   .transition-smooth {

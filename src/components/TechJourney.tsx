@@ -22,19 +22,19 @@ export const TechJourney = () => {
     },
     {
       icon: Cloud,
-      phase: "Cloud & IoT",
+      phase: "Cloud Computing",
       year: "Exploring",
       color: "hsl(300 80% 60%)",
-      skills: ["Cloud Computing", "IoT Architecture", "Arduino", "Edge Computing"],
-      description: "Bridging software and hardware to understand connected systems"
+      skills: ["Cloud Computing", "AWS Basics", "Cloud Architecture", "System Design"],
+      description: "Understanding scalable cloud infrastructure and distributed systems"
     },
     {
       icon: Brain,
-      phase: "AI & Innovation",
-      year: "Learning",
+      phase: "Data Science",
+      year: "Current Focus",
       color: "hsl(280 75% 65%)",
-      skills: ["Generative AI", "ML Basics", "AI Integration"],
-      description: "Exploring how AI shapes tomorrow's technology landscape"
+      skills: ["Data Analysis", "Data Modelling", "Visualization Tools", "Python Analytics"],
+      description: "Transforming data into insights through analysis and visualization"
     },
     {
       icon: Rocket,

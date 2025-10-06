@@ -63,13 +63,12 @@ export const About = () => {
         
         <Card className="p-10 bg-white/80 backdrop-blur-sm border-2 border-primary/20 shadow-elegant">
           <p className="text-lg text-foreground leading-relaxed text-center max-w-4xl mx-auto">
-            I'm a <span className="font-semibold text-primary">second-year CSE student at NIET</span>, 
-            passionate about understanding not just the "how" but the "why" of technology. 
+            I'm a <span className="font-semibold text-primary">third-year CSE student at NIET</span>, 
+            passionate about understanding not just the "how" but the "why" of technology.
             From building Java GUI projects to exploring <span className="font-semibold text-accent">cloud computing</span>, 
-            <span className="font-semibold text-accent"> IoT connectivity</span>, and 
-            <span className="font-semibold text-accent"> generative AI</span> — I'm constantly evolving. 
-            As a <span className="font-semibold">GDG Class Ambassador</span> and active community member, 
-            I believe in growing through meaningful connections and shared learning experiences.
+            <span className="font-semibold text-accent"> data analysis</span>, and 
+            <span className="font-semibold text-accent"> data visualization</span> — I'm constantly evolving. 
+            As an active community member, I believe in growing through meaningful connections and shared learning experiences.
           </p>
         </Card>
       </div>

@@ -12,10 +12,10 @@ export const Projects = () => {
       category: "Development"
     },
     {
-      title: "Arduino IoT Experiments",
-      description: "Explored IoT connectivity and architecture layers through hands-on Arduino projects, understanding the intersection of software and hardware.",
-      tech: ["Arduino", "IoT", "C++", "Hardware"],
-      category: "Hardware"
+      title: "Data Analysis Projects",
+      description: "Working with data visualization and analysis tools to transform raw data into meaningful insights using Python and modern analytics libraries.",
+      tech: ["Python", "Pandas", "Data Visualization", "Analytics"],
+      category: "Data Science"
     },
     {
       title: "Data Structures & Algorithms",
@@ -24,8 +24,8 @@ export const Projects = () => {
       category: "Algorithms"
     },
     {
-      title: "Iotron Event Support",
-      description: "Handled LinkedIn promotions and event coordination for Signode Group's Iotron event, showcasing organizational and communication skills.",
+      title: "Tech Event Coordination",
+      description: "Handled LinkedIn promotions and event coordination for college tech events, showcasing organizational and communication skills.",
       tech: ["Event Management", "Social Media", "Communication"],
       category: "Leadership"
     }
@@ -33,16 +33,16 @@ export const Projects = () => {
 
   const achievements = [
     {
-      title: "GDG Class Ambassador",
-      description: "CS Branch Representative for Google Developer Group"
-    },
-    {
       title: "DevFest Noida 2024",
       description: "Active participant in the developer community event"
     },
     {
-      title: "Signode Group Member",
+      title: "Tech Community Leader",
       description: "Contributing to college tech community initiatives"
+    },
+    {
+      title: "Consistent Problem Solver",
+      description: "Regular practice in data structures and algorithms"
     }
   ];
 

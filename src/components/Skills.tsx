@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Database, Cloud, Cpu, Users, Wifi } from "lucide-react";
+import { Code, Database, Cloud, Cpu, Users } from "lucide-react";
 
 export const Skills = () => {
   const skillCategories = [
@@ -24,20 +24,14 @@ export const Skills = () => {
     },
     {
       icon: Cpu,
-      category: "IoT & Hardware",
-      skills: ["Arduino", "IoT Architecture", "Edge Computing", "Hardware Integration"],
+      category: "Data Analysis & Visualization",
+      skills: ["Data Analysis", "Data Modelling", "Visualization Tools", "Python Analytics", "Pandas"],
       color: "hsl(280 75% 65%)"
-    },
-    {
-      icon: Wifi,
-      category: "AI & Emerging Tech",
-      skills: ["Generative AI", "Machine Learning Basics", "AI Integration"],
-      color: "hsl(270 70% 70%)"
     },
     {
       icon: Users,
       category: "Leadership & Community",
-      skills: ["GDG Ambassador", "Event Management", "LinkedIn Promotion", "Community Building"],
+      skills: ["Event Management", "LinkedIn Promotion", "Community Building", "Team Collaboration"],
       color: "hsl(340 80% 50%)"
     }
   ];

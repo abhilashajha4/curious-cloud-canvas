@@ -39,20 +39,31 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         <div className="animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6 shadow-soft">
-            <Sparkles className="w-4 h-4 text-white" />
-            <span className="text-white font-medium">Cloud Explorer & Tech Enthusiast</span>
+          {/* Profile Photo Circle */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white/40 shadow-glow backdrop-blur-sm bg-white/10 group hover:scale-105 transition-smooth">
+              <div className="absolute inset-0 flex items-center justify-center text-white/70 text-sm font-medium">
+                Upload Your Photo
+              </div>
+              {/* Placeholder gradient - user can replace this */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30" />
+            </div>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-heading font-bold text-white mb-6 tracking-tight">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6 shadow-soft">
+            <Sparkles className="w-4 h-4 text-white" />
+            <span className="text-white font-medium">Cloud Explorer & Data Enthusiast</span>
+          </div>
+          
+          <h1 className="text-6xl md:text-8xl font-heading font-bold text-white mb-6 tracking-tight drop-shadow-lg">
             Abhilasha Jha
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed font-light">
             A curious and determined CS student exploring the intersection of{" "}
             <span className="font-semibold">Cloud Computing</span>,{" "}
-            <span className="font-semibold">IoT</span>, and{" "}
-            <span className="font-semibold">Generative AI</span>
+            <span className="font-semibold">Data Analysis</span>, and{" "}
+            <span className="font-semibold">Data Visualization</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

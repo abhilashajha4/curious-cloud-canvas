@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Sparkles } from "lucide-react";
 import butterflyBg from "@/assets/butterfly-bg.jpg";
+import profilePhoto from "@/assets/profile-photo.png";
 
 export const Hero = () => {
   const scrollToAbout = () => {
@@ -41,12 +42,12 @@ export const Hero = () => {
         <div className="animate-fade-in-up">
           {/* Profile Photo Circle */}
           <div className="mb-8 flex justify-center">
-            <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white/40 shadow-glow backdrop-blur-sm bg-white/10 group hover:scale-105 transition-smooth">
-              <div className="absolute inset-0 flex items-center justify-center text-white/70 text-sm font-medium">
-                Upload Your Photo
-              </div>
-              {/* Placeholder gradient - user can replace this */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30" />
+            <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white/40 shadow-glow backdrop-blur-sm group hover:scale-105 transition-smooth">
+              <img 
+                src={profilePhoto} 
+                alt="Abhilasha Jha - Profile" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
           
@@ -80,7 +81,7 @@ export const Hero = () => {
             <Button 
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-6 text-lg transition-smooth hover:scale-105"
+              className="border-2 border-white/90 bg-white/10 text-white hover:bg-white hover:text-primary font-semibold px-8 py-6 text-lg transition-smooth hover:scale-105 backdrop-blur-sm"
               asChild
             >
               <a href="https://www.linkedin.com/in/abhilasha-jha-a54971276" target="_blank" rel="noopener noreferrer">

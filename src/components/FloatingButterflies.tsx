@@ -13,14 +13,14 @@ export const FloatingButterflies = () => {
   const [butterflies, setButterflies] = useState<Butterfly[]>([]);
 
   useEffect(() => {
-    // Create 8 butterflies with random positions
+    // Create 8 butterflies with larger sizes
     const newButterflies = Array.from({ length: 8 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
       delay: Math.random() * 5,
       duration: 12 + Math.random() * 8,
-      size: 35 + Math.random() * 25,
+      size: 50 + Math.random() * 35, // Increased size
     }));
     setButterflies(newButterflies);
   }, []);
@@ -30,7 +30,7 @@ export const FloatingButterflies = () => {
       {butterflies.map((butterfly) => (
         <div
           key={butterfly.id}
-          className="absolute animate-float-slow opacity-30"
+          className="absolute animate-float-slow opacity-60"
           style={{
             left: `${butterfly.x}%`,
             top: `${butterfly.y}%`,
@@ -50,25 +50,33 @@ export const FloatingButterflies = () => {
             <path
               d="M 45 50 Q 20 30 15 15 Q 10 5 20 8 Q 35 12 45 35 Z"
               fill={`url(#gradient1-${butterfly.id})`}
-              opacity="0.9"
+              opacity="1"
+              strokeWidth="1.5"
+              stroke="hsl(330 90% 40%)"
             />
             {/* Left lower wing */}
             <path
               d="M 45 50 Q 25 60 20 75 Q 18 85 28 80 Q 40 72 45 55 Z"
               fill={`url(#gradient2-${butterfly.id})`}
-              opacity="0.85"
+              opacity="0.95"
+              strokeWidth="1.5"
+              stroke="hsl(340 85% 45%)"
             />
             {/* Right upper wing */}
             <path
               d="M 55 50 Q 80 30 85 15 Q 90 5 80 8 Q 65 12 55 35 Z"
               fill={`url(#gradient1-${butterfly.id})`}
-              opacity="0.9"
+              opacity="1"
+              strokeWidth="1.5"
+              stroke="hsl(330 90% 40%)"
             />
             {/* Right lower wing */}
             <path
               d="M 55 50 Q 75 60 80 75 Q 82 85 72 80 Q 60 72 55 55 Z"
               fill={`url(#gradient2-${butterfly.id})`}
-              opacity="0.85"
+              opacity="0.95"
+              strokeWidth="1.5"
+              stroke="hsl(340 85% 45%)"
             />
             {/* Body */}
             <ellipse
@@ -76,7 +84,9 @@ export const FloatingButterflies = () => {
               cy="50"
               rx="4"
               ry="25"
-              fill="hsl(330 85% 25%)"
+              fill="hsl(330 90% 20%)"
+              stroke="hsl(330 90% 15%)"
+              strokeWidth="1"
             />
             {/* Head */}
             <circle cx="50" cy="30" r="5" fill="hsl(330 85% 30%)" />

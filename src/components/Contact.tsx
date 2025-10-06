@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Linkedin, Mail, Github, Heart } from "lucide-react";
+import { Linkedin, Mail, Heart } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.png";
 
 export const Contact = () => {
   return (
@@ -11,6 +12,17 @@ export const Contact = () => {
       
       <div className="max-w-4xl mx-auto relative z-10">
         <div className="text-center mb-12">
+          {/* Profile Photo */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-primary/30 shadow-elegant backdrop-blur-sm group hover:scale-105 transition-smooth">
+              <img 
+                src={profilePhoto} 
+                alt="Abhilasha Jha - Profile" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          
           <h2 className="text-5xl md:text-6xl font-heading font-bold text-primary mb-4">
             Let's Connect
           </h2>
@@ -24,8 +36,8 @@ export const Contact = () => {
             <p className="text-lg text-foreground leading-relaxed">
               I'm passionate about technology, learning, and building meaningful connections. 
               Whether you want to discuss <span className="font-semibold text-primary">cloud computing</span>, 
-              <span className="font-semibold text-primary"> IoT projects</span>, 
-              <span className="font-semibold text-primary"> AI innovations</span>, or simply want to connect — 
+              <span className="font-semibold text-primary"> data analysis</span>, 
+              <span className="font-semibold text-primary"> data visualization</span>, or simply want to connect — 
               I'd love to hear from you!
             </p>
           </div>

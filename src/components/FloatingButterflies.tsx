@@ -13,14 +13,14 @@ export const FloatingButterflies = () => {
   const [butterflies, setButterflies] = useState<Butterfly[]>([]);
 
   useEffect(() => {
-    // Create 8 butterflies with larger sizes
-    const newButterflies = Array.from({ length: 8 }, (_, i) => ({
+    // Create 12 butterflies spread across the viewport
+    const newButterflies = Array.from({ length: 12 }, (_, i) => ({
       id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      delay: Math.random() * 5,
-      duration: 12 + Math.random() * 8,
-      size: 50 + Math.random() * 35, // Increased size
+      x: (Math.random() * 95) + 2.5, // Spread across full width with margin
+      y: (Math.random() * 95) + 2.5, // Spread across full height with margin
+      delay: Math.random() * 6,
+      duration: 15 + Math.random() * 10,
+      size: 55 + Math.random() * 40,
     }));
     setButterflies(newButterflies);
   }, []);
@@ -30,7 +30,7 @@ export const FloatingButterflies = () => {
       {butterflies.map((butterfly) => (
         <div
           key={butterfly.id}
-          className="absolute animate-float-slow opacity-60"
+          className="absolute animate-float-slow opacity-30"
           style={{
             left: `${butterfly.x}%`,
             top: `${butterfly.y}%`,

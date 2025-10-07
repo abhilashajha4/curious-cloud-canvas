@@ -13,15 +13,24 @@ export const FloatingButterflies = () => {
   const [butterflies, setButterflies] = useState<Butterfly[]>([]);
 
   useEffect(() => {
-    // Create 12 butterflies spread across the viewport
-    const newButterflies = Array.from({ length: 12 }, (_, i) => ({
-      id: i,
-      x: (Math.random() * 95) + 2.5, // Spread across full width with margin
-      y: (Math.random() * 95) + 2.5, // Spread across full height with margin
-      delay: Math.random() * 6,
-      duration: 15 + Math.random() * 10,
-      size: 55 + Math.random() * 40,
-    }));
+    // Create 12 butterflies spread across the viewport, avoiding center-top area (profile photo)
+    const newButterflies = Array.from({ length: 12 }, (_, i) => {
+      let x, y;
+      do {
+        x = (Math.random() * 95) + 2.5;
+        y = (Math.random() * 95) + 2.5;
+        // Avoid center-top area where profile photo is (30-70% width, 0-40% height)
+      } while (x > 30 && x < 70 && y < 40);
+      
+      return {
+        id: i,
+        x,
+        y,
+        delay: Math.random() * 6,
+        duration: 15 + Math.random() * 10,
+        size: 55 + Math.random() * 40,
+      };
+    });
     setButterflies(newButterflies);
   }, []);
 

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, Sparkles } from "lucide-react";
 import butterflyBg from "@/assets/butterfly-bg.jpg";
 import profilePhoto from "@/assets/profile-photo.png";
+import heroVideo from "@/assets/hero-video.mp4";
 
 export const Hero = () => {
   const scrollToAbout = () => {
@@ -10,12 +11,23 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 gradient-hero opacity-90" />
+      {/* Video background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-40"
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video>
+      
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 gradient-hero opacity-60" />
       
       {/* Butterfly background overlay */}
       <div 
-        className="absolute inset-0 opacity-20 bg-cover bg-center mix-blend-overlay"
+        className="absolute inset-0 opacity-10 bg-cover bg-center mix-blend-overlay"
         style={{ backgroundImage: `url(${butterflyBg})` }}
       />
       

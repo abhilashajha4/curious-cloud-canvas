@@ -11,23 +11,12 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-40"
-      >
-        <source src={heroVideo} type="video/mp4" />
-      </video>
-      
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 gradient-hero opacity-60" />
+      {/* Gradient background */}
+      <div className="absolute inset-0 gradient-hero opacity-90" />
       
       {/* Butterfly background overlay */}
       <div 
-        className="absolute inset-0 opacity-10 bg-cover bg-center mix-blend-overlay"
+        className="absolute inset-0 opacity-20 bg-cover bg-center mix-blend-overlay"
         style={{ backgroundImage: `url(${butterflyBg})` }}
       />
       
@@ -102,6 +91,19 @@ export const Hero = () => {
             </Button>
           </div>
         </div>
+      </div>
+      
+      {/* Video in corner */}
+      <div className="absolute bottom-8 right-8 z-20 rounded-2xl overflow-hidden shadow-elegant border-2 border-white/30 backdrop-blur-sm">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-64 h-64 md:w-80 md:h-80 object-cover"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
       </div>
       
       {/* Scroll indicator */}

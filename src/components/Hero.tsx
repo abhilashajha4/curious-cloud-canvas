@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, Sparkles } from "lucide-react";
 import butterflyBg from "@/assets/butterfly-bg.jpg";
 import profilePhoto from "@/assets/profile-photo.png";
-import heroVideo from "@/assets/hero-video.mp4";
 
 export const Hero = () => {
   const scrollToAbout = () => {
@@ -10,24 +9,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden">
-      {/* Video Section at Top */}
-      <div className="relative w-full pt-8 px-6 z-10">
-        <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-pink-200/50 bg-gradient-to-br from-pink-50/20 to-purple-50/20 backdrop-blur-sm p-2">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-auto rounded-2xl"
-          >
-            <source src={heroVideo} type="video/mp4" />
-          </video>
-        </div>
-      </div>
-      
-      {/* Hero Content Below */}
-      <div className="flex-1 flex items-center justify-center relative">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Gradient background */}
         <div className="absolute inset-0 gradient-hero opacity-90" />
         
@@ -108,8 +90,7 @@ export const Hero = () => {
             </Button>
           </div>
         </div>
-      </div>
-      </div>
+        </div>
       
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10">
